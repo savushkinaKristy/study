@@ -76,7 +76,7 @@ def cipher(text, shift, mode):
             if is_upper:
                 new_bukva=new_bukva.upper()
             result.append(new_bukva)
-        else: # если это не буква, то просто добавляем без изменений
+        else: # если это не буква, то просто добавляем без изменений.
             result.append(bukva)
     return "".join(result)
 
