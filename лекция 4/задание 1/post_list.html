@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная - Мой Блог{% endblock %}
+
+{% block content %}
+    <h1>Мой Блог</h1>
+    
+    {% for post in posts %}
+        <div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 20px;">
+            <h2>{{ post.title }}</h2>
+            <p><small>Автор: {{ post.author }} | Дата: {{ post.published_date }}</small></p>
+            <p>{{ post.content }}</p>
+        </div>
+    {% endfor %}
+    
+{% endblock %}
