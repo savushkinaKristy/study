@@ -2,7 +2,7 @@ from random import choice, randint
 
 import pygame
 
-# Инициализация Pygame должна быть до создания экрана
+# Инициализация Pygame должна быть до создания экрана.
 pygame.init()
 
 # Константы для размеров поля и сетки:
