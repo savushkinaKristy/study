@@ -1,0 +1,24 @@
+{% load static custom_filters %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Информация о книге</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="book-card">
+        <h1>Карточка книги</h1>
+
+        <h2>Название: {{ book.title }}</h2>
+        <p><strong>Автор:</strong> {{ book.author }}</p>
+        <p><strong>Год издания:</strong> {{ book.year }}</p>
+
+
+        <p><strong>Цена:</strong> {{ book.price|format_currency }}</p>
+
+        <hr>
+        <a href="/">Вернуться на главную</a>
+    </div>
+</body>
+</html>
