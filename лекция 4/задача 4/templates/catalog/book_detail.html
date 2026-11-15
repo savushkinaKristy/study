@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static custom_filters %}
+
+{% block title %}Информация о книге{% endblock %}
+
+{% block content %}
+  <div class="book-card">
+    <h1>Карточка книги</h1>
+
+    <h2>Название: {{ book.title }}</h2>
+    <p><strong>Автор:</strong> {{ book.author }}</p>
+    <p><strong>Год издания:</strong> {{ book.year }}</p>
+    <p><strong>Цена:</strong> {{ book.price|format_currency }}</p>
+
+    <hr>
+    <a href="{% url 'book_list' %}">Вернуться к списку книг</a>
+  </div>
+{% endblock %}
