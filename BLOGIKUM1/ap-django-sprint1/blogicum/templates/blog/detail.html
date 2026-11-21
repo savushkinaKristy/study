@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Публикация №{{ post.id }} — Блогикум{% endblock %}
+
+{% block content %}
+<article>
+    <h1>Публикация №{{ post.id }}</h1>
+    <p>Место: {{ post.location }}</p>
+    <p>Дата: {{ post.date }}</p>
+    <p>Категория: {{ post.category }}</p>
+    <p>{{ post.text }}</p>
+</article>
+<a href="{% url 'blog:index' %}">Вернуться на главную</a>
+{% endblock %}

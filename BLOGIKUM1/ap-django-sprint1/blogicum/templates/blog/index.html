@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Главная — Блогикум{% endblock %}
+
+{% block content %}
+<h1>Последние публикации</h1>
+
+{% for post in posts %}
+<article class="mb-4">
+    <h2>
+        <a href="{% url 'blog:post_detail' post.id %}">
+            Публикация №{{ post.id }}
+        </a>
+    </h2>
+    <p>Место: {{ post.location }}</p>
+    <p>Дата: {{ post.date }}</p>
+    <p>Категория: {{ post.category }}</p>
+    <p>{{ post.text }}</p>
+</article>
+{% empty %}
+<p>Публикаций пока нет.</p>
+{% endfor %}
+{% endblock %}
